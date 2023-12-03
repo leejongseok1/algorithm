@@ -12,65 +12,27 @@
 3 5 // 1
 4 4 ㅇ
 0 8     '''
-'''
+
 n, m = map(int, input().split())
 
-cnt = 0
-
-for i in range(m):
-    ao, bx = map(int, input().split())
-
-
-while True:
-    if ao >= n:
-        continue
-    elif ao < n:
-        bx -= 1
-        ao += 1
-        cnt += 1
-        if ao == 4:
-            break
-    
-    if cnt == (m - 1):
-        break
-
-print(cnt)
-'''
-
-
-N,M = map(int, input().split(" "))
 card = []
-cnt = M-1
+cnt = m - 1
 temp = []
 cost = 0
 
-for _ in range(M):
-    card.append(list(map(int ,input().split(" "))))
-    
+for _ in range(m):
+    card.append(list(map(int, input().split())))
+
 for i in range(len(card)):
-    if card[i][0] < N:
-        temp.append(N-card[i][0])
+    if card[i][0] < n: # 당첨 도장이 n개 미만이면
+        temp.append(n-card[i][0])
     else:
         cnt -= 1
-    
-temp.sort()
-    
+
+temp.sort() # 최솟값을 구하기 위해 정렬
+
 if cnt > 0:
-    for i in range(cnt):
+    for i in range(cnt): # cnt:얻고자하는 경품 갯수
         cost += temp[i]
-            
+
 print(cost)
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
