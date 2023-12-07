@@ -5,7 +5,7 @@ for _ in range(9):
   matrix.append(row)
   
 max_num = -10001
-for i in range(9):
+for i in range(9):  
   big = max(matrix[i])
   if big > max_num:
     max_num = big
