@@ -8,10 +8,12 @@ while n > line:
     line += 1
 
 if line % 2 == 1: # 홀수 일 때
-    a = line - n + 1
-    b = n
+    top = line - n + 1
+    bottom = n
 elif line % 2 == 0: # 짝수 일 때
-    a = n
-    b = line - n + 1
+    top = n
+    bottom = line - n + 1
 
-print(f'{a}/{b}')
+print(top, '/', bottom, sep="")
+
+# print(f'{top}/{bottom}')  -> 시간초과
