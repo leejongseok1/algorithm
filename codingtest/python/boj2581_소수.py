@@ -21,5 +21,3 @@ if prime:
     print(prime[0])
 else:
     print(-1)
-
-
