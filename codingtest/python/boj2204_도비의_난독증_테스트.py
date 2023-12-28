@@ -3,15 +3,11 @@ import sys
 input = sys.stdin.readline
 
 while True:
-
     T = int(input())
     if T == 0:
         break
     word = []
     for _ in range(T):
-        w = input()
-        word.append([w.upper(), w])
-        # word.append(input())
-    # word.sort(key=str.lower)
-    word.sort()
-    print(word[0][1]) # print(word[0])
+        word.append(input().strip())
+    word.sort(key=str.lower)
+    print(word[0])
