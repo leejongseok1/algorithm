@@ -1,4 +1,4 @@
-def solution3(k, score):
+def solution(k, score):
     answer = []
     rank = [] # 전당
 
