@@ -4,7 +4,7 @@ def solution(nums):
         return len(nums)/2
     return result
 
-# 너무 어렵게 생각한 듯
+# 너무 어렵게 생각한 듯. 시간초과
 def solution2(nums):
     from itertools import combinations
 
