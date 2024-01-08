@@ -10,7 +10,7 @@ def solution(nums):
     return cnt
     
 def is_prime(num):
-    for i in range(2, int(num**0.5) + 1):
+    for i in range(2, int(num**0.5) + 1): # 2부터 제곱근까지 for문. num까지 해도 정답임
         if num % i == 0:
             return False
     return True
