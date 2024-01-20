@@ -2,16 +2,21 @@ def solution(X, Y):
     from collections import Counter
     answer = ''
     
+    # 각 숫자 발생 횟수 계산
     cnt_X, cnt_Y = Counter(X), Counter(Y)
     
+    # 내림차순
     common = sorted(cnt_X & cnt_Y, reverse = True)
     
+    # 공통된 숫자가 없다면 '-1' 반환
     if not common:
         return '-1'
     
+    # 짝 지을 수 있는 공통 숫자 수 만큼 곱해서 문자열 만듦
     for i in common:
         answer += str(i * min(cnt_X[i], cnt_Y[i]))
     
+    # 문자열이 0으로만 이루어진 경우 '0' 반환
     if len(answer) == answer.count('0'):
         return '0'
     else:
