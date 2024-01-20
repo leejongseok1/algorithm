@@ -23,17 +23,17 @@ def solution(X, Y):
         return answer
 
 X = "100"
-Y = "2345" # -1 
+Y = "2345" 
 
 X2 = "100"
-Y2 = "203045" # 0
+Y2 = "203045"
 
 X3 = "5525" 
-Y3 = "1255" # 552
+Y3 = "1255"
 
-print(solution(X, Y))
-print(solution(X2, Y2))
-print(solution(X3, Y3))
+print(solution(X, Y))   # -1
+print(solution(X2, Y2)) # 0
+print(solution(X3, Y3)) # 552
 
 # 9 ~ 0 순으로 숫자를 조회하면서 answer의 성분이 내림차순으로 더해짐
 def solution2(X, Y):
