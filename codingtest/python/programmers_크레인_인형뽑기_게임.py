@@ -12,7 +12,7 @@ def solution(board, moves):
                 if len(basket) >= 2:
                     if basket[-1] == basket[-2]:
                         basket.pop(-1)
-                        basket.pop(-2)
+                        basket.pop(-1)
                         result += 2
                 break
 
