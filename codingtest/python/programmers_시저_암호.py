@@ -1,18 +1,17 @@
 def solution(s, n):
     
-    alpha_low = 'abcdefghijklmnopqrstuvwxyz'
-    alpha_up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    
-    answer = ''
-    
-    for char in s:
-        if char in alpha_low:
-            idx = alpha_low.find(char) + n
-            answer += alpha_low[idx%26]
-        elif char in alpha_up:
-            idx = alpha_up.find(char) + n
-            answer += alpha_up[idx%26]
+    result = ""    
+    low_alpha = "abcdefghijklmnopqrstuvwxyz"
+    upp_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    for c in s:
+        if c in low_alpha:
+            idx = low_alpha.find(c) + n # c의 index를 찾아서 n 더함
+            result += low_alpha[idx % 26]
+        elif c in upp_alpha:
+            idx = upp_alpha.find(c) + n
+            result += upp_alpha[idx % 26]
         else:
-            answer += ' '
+            result += ' '
     
-    return answer
+    return result
