@@ -1,10 +1,7 @@
-# 괄호 짝 맞는 문자열 - VPS
-# 괄호 짝 맞는지 검사 YES or NO
-
 import sys
-n = int(sys.stdin.readline())
+T = int(sys.stdin.readline())
 
-for _ in range(n):
+for _ in range(T):
     stack = []
     ps = input()
     for x in ps:
@@ -12,14 +9,14 @@ for _ in range(n):
             stack.append(x) 
         elif x == ')':
             # 비어있지 않다면 pop으로 stack에 있는 '('를 지움 - 짝 OK
-            if len(stack) != 0:
+            if stack:
                 stack.pop()
             else:
                 # 비어있는데 ')'가 들어오면 VPS가 아닌 것.
                 print("NO")
                 break
     else:
-        if len(stack) == 0:
+        if not stack:
             print("YES")
         else:
             print("NO")
@@ -46,11 +43,3 @@ for _ in range(n):
 #         print("NO")
 #     elif sum == 0:
 #         print("YES")
-
-
-
-            
-        
-
-
-    
