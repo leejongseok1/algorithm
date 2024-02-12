@@ -21,9 +21,9 @@ for _ in range(N):
             print(q.pop())
         else:
             print(-1)
-    elif command[0] == 5:       # 갯수 ㅇ
+    elif command[0] == 5:       # 갯수
         print(len(q))
-    elif command[0] == 6:       # empty ㅇ
+    elif command[0] == 6:       # empty
         if not q:
             print(1)
         else:
