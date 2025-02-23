@@ -21,6 +21,4 @@ for i in range(len(move)):
         raw = next_raw
         col = next_col
         
-print(col, raw)
-    
-    
+print(raw, col)
